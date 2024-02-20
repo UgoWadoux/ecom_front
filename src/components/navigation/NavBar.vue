@@ -14,28 +14,34 @@
             <router-link to="/services">Services</router-link>
           </li>
           <li><a>Blog</a></li>
-          <li><a>Connexion</a></li>
+          <li>
+            <router-link to="/login">Connexion</router-link>
+          </li>
 
         </ul>
       </div>
-      <a class="" href="/"><img src="../assets/images/logo/logo_greenhub.webp" class="w-8"></a>
+      <a class="" href="/"><img src="../../assets/images/logo/logo_greenhub.webp" class="w-8"></a>
     </div>
+
     <div class="navbar-end">
-      <button class="btn btn-ghost btn-circle">
-        <i-ph-user-bold></i-ph-user-bold>
-      </button>
+      <router-link to="/login">
+        <button class="btn btn-ghost btn-circle">
+          <i-ph-user-bold></i-ph-user-bold>
+        </button>
+      </router-link>
+
       <router-link to="/cart">
-      <button class="btn btn-ghost btn-circle">
-        <div class="indicator">
-          <i-ph-shopping-cart-bold></i-ph-shopping-cart-bold>
-          <span class="badge badge-xs badge-primary indicator-item"></span>
-        </div>
-      </button>
+        <button class="btn btn-ghost hover:btn-circle">
+          <div class="indicator">
+            <i-ph-shopping-cart-bold></i-ph-shopping-cart-bold>
+            <span class="badge badge-xs badge-primary indicator-item"></span>
+          </div>
+        </button>
       </router-link>
     </div>
   </div>
 </template>
 <script setup>
-import HomeView from '@/views/HomeView.vue'
-import ProductList from '@/views/ProductList.vue'
+import HomeView from '@/views/home/HomeView.vue'
+import ProductList from '@/views/product/ProductList.vue'
 </script>

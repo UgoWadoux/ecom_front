@@ -1,6 +1,6 @@
 <template>
   <footer class="footer p-10 text-base-content mt-auto  text-white">
-    <img src="../assets/images/logo/logo_footer.webp" alt="">
+    <img src="../../assets/images/logo/logo_footer.webp" alt="">
     <nav>
       <h6 class="footer-title">Services</h6>
       <a class="link link-hover">Branding</a>
