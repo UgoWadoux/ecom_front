@@ -1,19 +1,11 @@
 <script setup>
 import ProductItem from '@/components/products/ProductItem.vue'
-import cubeVaisselle from '../../../public/product/cube_vaisselle.webp'
-import charlotteAlimentaire from '../../../public/product/charlotte_alimentaire.webp'
-import ProductItemHome from '@/components/products/ProductItemHome.vue'
 </script>
 <template>
   <div class="flex  flex-col justify-around">
     <ProductItem
       v-for="product in products"
-      :key="product.id"
-      :source="product.source"
-      :name="product.name"
-      :price="product.price"
-      :category="product.category"
-      :description="product.description"
+      :product="product"
     ></ProductItem>
   </div>
 </template>

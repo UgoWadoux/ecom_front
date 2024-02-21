@@ -20,7 +20,7 @@
 
         </ul>
       </div>
-      <a class="" href="/"><img src="../../assets/images/logo/logo_greenhub.webp" class="w-8"></a>
+      <router-link to="/"><img src="../../assets/images/logo/logo_greenhub.webp" class="w-8"></router-link>
     </div>
 
     <div class="navbar-end">
