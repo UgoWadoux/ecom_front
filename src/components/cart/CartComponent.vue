@@ -15,7 +15,7 @@ const cartStore = useCartStore()
 
       </cart-item>
     <p>Total Items: {{ cartStore.totalItems }}</p>
-    <p>Total Cost: ${{ cartStore.totalCost }}</p>
+    <p>Total Cost: ${{ cartStore.totalCost.toFixed(2) }}</p>
 <!--    <button @click="cartStore.addItem({ id:  1, title: 'Product', price:  100 })">Add Product</button>-->
   </div>
 </template>
