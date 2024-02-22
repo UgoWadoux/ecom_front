@@ -66,7 +66,7 @@
 <span class="px-2.5 py-0.5 text-xs text-cyan-600 bg-cyan-100 dark:bg-gray-700 rounded-xl dark:text-gray-200">{{product.category}}</span>
               <h2
                 class="max-w-xl mt-6 mb-6 text-xl font-semibold leading-loose tracking-wide text-gray-700 md:text-2xl dark:text-gray-300">
-                {{product.name}}
+                {{product.title}}
               </h2>
               <div class="flex flex-wrap items-center mb-6">
                 <ul class="flex mb-4 mr-2 lg:mb-0">

@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
-import { data } from 'autoprefixer'
 
 axios.defaults.baseURL = import.meta.env.VITE_FAKESTORE_URL
 export const useHttpStore = defineStore({
@@ -12,8 +11,8 @@ export const useHttpStore = defineStore({
   actions:{
     async getProducts(){
       try{
-        let data = await axios.get('/products')
-        this.products = data.data
+        let response = await axios.get('/products')
+        this.products = response.data
         return this.products
       }catch (error){
         console.log(error)
@@ -21,8 +20,8 @@ export const useHttpStore = defineStore({
     },
     async getProduct(id){
       try {
-        let data = await axios.get(`/product/${id}`)
-        this.product = data.data
+        let response = await axios.get('/products/'+id)
+        this.product = response.data
         return this.product
       }catch (error){
         console.log(error)
