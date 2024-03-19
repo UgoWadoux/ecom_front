@@ -9,11 +9,11 @@ export default {
 }
 </script>
 <template>
-  <div class="card  bg-base-100 shadow-xl w-32">
-    <figure class="w-32h h-32"><img :src="source" alt="Shoes" class="object-cover h-full w-full" /></figure>
+  <div class="card  bg-base-100 shadow-xl w-32 sm:w-48 xl:w-96 m-4">
+    <figure class="w-32 h-32 sm:w-48 sm:h-48 xl:w-96 xl:h-96"><img :src="source" alt="Shoes" class="object-cover h-full w-full" /></figure>
     <div class="card-body p-2 items-center h-1/3">
-      <h2 class="card-title text-s">{{name}}</h2>
-      <p class="text-xs">{{description}}</p>
+      <h2 class="card-title text-s text-center">{{name}}</h2>
+      <p class="text-xs text-center">{{description}}</p>
       <div class="card-actions justify-center">
         <button class="btn btn-primary text-xs">voir plus</button>
       </div>

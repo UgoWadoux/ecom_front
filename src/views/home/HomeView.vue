@@ -5,11 +5,14 @@ import ServiceItemHome from '@/components/services/ServiceItemHome.vue'
 </script>
 
 <template>
-  <main class="flex justify-center mb-auto">
-    <img src="../../assets/images/accueil_mobile.png">
+  <main class="flex justify-center mb-auto ">
+<!--    <img src="../../assets/images/accueil_mobile.png" class=" visible sm:invisible">-->
+    <img src="../../assets/images/Greeen-Hub-restyle-1.webp" alt="" class="max-h-96">
   </main>
-  <h2>Nos derniers produits !</h2>
-  <div class="flex justify-between">
+  <div class="flex justify-center font-r">
+    <h2 class="font-roboto text-xl m-4 ">Nos derniers produits !</h2>
+  </div>
+  <div class="flex justify-center ">
     <ProductItemHome
       v-for="product in products"
       :key="product.id"
@@ -18,9 +21,11 @@ import ServiceItemHome from '@/components/services/ServiceItemHome.vue'
       :description="product.description"
     ></ProductItemHome>
   </div>
-  <h2>Des services eco-responsable ? C'est possible!!</h2>
+  <div class="flex justify-center m-4 text-center">
+    <h2 class="font-roboto text-xl">Des services eco-responsable ? C'est possible!!</h2>
+  </div>
 
-  <div class="flex justify-between">
+  <div class="flex justify-center">
 
     <ServiceItemHome
       v-for="service in services"

@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar bg-base-100 flex justify-between">
+  <div class="navbar bg-gray-400 flex justify-between mt-auto">
     <div class="navbar-start w-auto">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost btn-circle">

@@ -1,4 +1,4 @@
-<template>
+;k<template>
   <div class="flex flex-col items-center ">
 
     <label class="input input-bordered flex items-center gap-2 mb-2 w-64">

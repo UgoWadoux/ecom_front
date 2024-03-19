@@ -7,7 +7,7 @@ import FooterComponent from '@/components/navigation/FooterComponent.vue'
   <header>
     <NavBar></NavBar>
   </header>
-<main>
+<main >
 <RouterView />
 </main>
     <footer-component></footer-component>
@@ -15,7 +15,7 @@ import FooterComponent from '@/components/navigation/FooterComponent.vue'
 
 <style scoped>
 main{
-  padding: 20px;
+  //padding: 20px;
   //margin-left: 32px;
   //margin-right: 32px;
 }
