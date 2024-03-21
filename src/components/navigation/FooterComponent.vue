@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer p-10 text-base-content mt-auto  text-white">
+  <footer class="footer p-10  mt-auto text-white bottom-0">
     <img src="../../assets/images/logo/logo_footer.webp" alt="">
     <nav>
       <h6 class="footer-title">Services</h6>

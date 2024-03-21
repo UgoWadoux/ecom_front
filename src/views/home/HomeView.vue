@@ -5,36 +5,39 @@ import ServiceItemHome from '@/components/services/ServiceItemHome.vue'
 </script>
 
 <template>
-  <main class="flex justify-center mb-auto ">
-<!--    <img src="../../assets/images/accueil_mobile.png" class=" visible sm:invisible">-->
-    <img src="../../assets/images/Greeen-Hub-restyle-1.webp" alt="" class="max-h-96">
-  </main>
-  <div class="flex justify-center font-r">
-    <h2 class="font-roboto text-xl m-4 ">Nos derniers produits !</h2>
-  </div>
-  <div class="flex justify-center ">
-    <ProductItemHome
-      v-for="product in products"
-      :key="product.id"
-      :source="product.source"
-      :name="product.name"
-      :description="product.description"
-    ></ProductItemHome>
-  </div>
-  <div class="flex justify-center m-4 text-center">
-    <h2 class="font-roboto text-xl">Des services eco-responsable ? C'est possible!!</h2>
+  <div class="mb-8">
+    <main class="flex justify-center mb-auto ">
+      <!--    <img src="../../assets/images/accueil_mobile.png" class=" visible sm:invisible">-->
+      <img src="../../assets/images/Greeen-Hub-restyle-1.webp" alt="" class="max-h-96">
+    </main>
+    <div class="flex justify-center font-r">
+      <h2 class="font-roboto text-xl mt-8 font-bold ">Nos derniers produits !</h2>
+    </div>
+    <div class="grid grid-cols-1 grid-rows-1 flex-wrap gap-3 m-4  place-items-center ">
+      <div class="grid grid-cols-2 grid-rows-1 flex-wrap gap-3 m-4 place-items-center w-full max-w-3xl">
+        <ProductItemHome
+          v-for="product in products"
+          :product=product
+        ></ProductItemHome>
+      </div>
+    </div>
+
+    <div class="flex justify-center mt-8 text-center font-bold">
+      <h2 class="font-roboto text-xl">Des services eco-responsable ? C'est possible!!</h2>
+    </div>
+
+    <div class="grid grid-cols-1 grid-rows-1 flex-wrap  gap-3 m-4 place-items-center ">
+      <div class="grid grid-cols-2 grid-rows-1 flex-wrap gap-3 m-4 place-items-center w-full max-w-3xl">
+        <ServiceItemHome
+          v-for="service in services"
+          :service=service
+        ></ServiceItemHome>
+      </div>
+    </div>
+
   </div>
 
-  <div class="flex justify-center">
 
-    <ServiceItemHome
-      v-for="service in services"
-      :key="service.id"
-      :source="service.source"
-      :name="service.name"
-      :description="service.description"
-    ></ServiceItemHome>
-  </div>
 </template>
 <script>
 export default {
@@ -55,7 +58,7 @@ export default {
           description: 'Nos charlottes alimentaires proposés à l\'unité ou par lot de 3,'
         }
       ],
-      services:[
+      services: [
         {
           id: 'a63f630a-ef00-40d1-8e57-6b7139e12cf0',
           name: 'Lavage Voiture',

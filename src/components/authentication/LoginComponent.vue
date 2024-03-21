@@ -1,4 +1,5 @@
-;k<template>
+;k
+<template>
   <div class="flex flex-col items-center ">
 
     <label class="input input-bordered flex items-center gap-2 mb-2 w-64">
@@ -18,7 +19,8 @@
       connexion
     </button>
   </div>
-  <hr class="h-px my-8 bg-gray-500 border-0 dark:bg-gray-700">
+  <hr
+    class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
   <div class="flex flex-col items-center">
     <p>
       Pas encore de compte ?

@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar bg-gray-400 flex justify-between mt-auto">
+  <div class="navbar flex justify-between mt-auto border-b">
     <div class="navbar-start w-auto">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
@@ -42,6 +42,8 @@
   </div>
 </template>
 <script setup>
-import HomeView from '@/views/home/HomeView.vue'
-import ProductList from '@/views/product/ProductList.vue'
 </script>
+
+<style scoped>
+
+</style>

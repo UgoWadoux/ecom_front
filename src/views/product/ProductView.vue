@@ -70,7 +70,8 @@ const cartStore = useCartStore()
           <div class="lg:pl-20">
             <div class="mb-6 ">
               <span
-                class="px-2.5 py-0.5 text-xs text-cyan-600 bg-cyan-100 dark:bg-gray-700 rounded-xl dark:text-gray-200">{{ product?.category }}</span>
+                class="px-2.5 py-0.5 text-xs text-white bg-secondary dark:bg-gray-700 rounded-xl dark:text-gray-200">{{ product?.category
+                }}</span>
               <h2
                 class="max-w-xl mt-6 mb-6 text-xl font-semibold leading-loose tracking-wide text-gray-700 md:text-2xl dark:text-gray-300">
                 {{ product?.title }}
@@ -128,47 +129,26 @@ const cartStore = useCartStore()
             </div>
             <div class="mb-6">
               <h2 class="mb-2 text-lg font-bold text-gray-700 dark:text-gray-400">Description :</h2>
-              <div class="bg-gray-100 dark:bg-gray-700 rounded-xl">
+<!--              <div class="bg-gray-100 dark:bg-gray-700 rounded-xl">-->
                 <div class="p-3 lg:p-5 ">
-                  <div class="p-2 rounded-xl lg:p-6 dark:bg-gray-800 bg-gray-50">
-                    <div class="flex flex-wrap justify-center gap-x-10 gap-y-4">
-                      <div class="w-full mb-4 md:w-2/5">
+<!--                  <div class="p-2 rounded-xl lg:p-6 dark:bg-gray-800 bg-gray-50">-->
+<!--                    <div class="flx   gap-x-10 gap-y-4">-->
+<!--                      <div class="w-full mb-4 md:w-2/5">-->
                         <div class="flex ">
 <span class="mr-3 text-gray-500 dark:text-gray-400">
-<!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-diagram-3 w-7 h-7"-->
-  <!--     viewBox="0 0 16 16">-->
-  <!--<path fill-rule="evenodd"-->
-  <!--      d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"></path>-->
-  <!--</svg>-->
 </span>
                           <div>
-                            <!--                            <p class="mb-2 text-sm font-medium text-gray-500 dark:text-gray-400">-->
-                            <!--                              No. of cores-->
-                            <!--                            </p>-->
+
                             <h2 class="text-base font-semibold text-gray-700 dark:text-gray-400">
                               {{ product?.description }}
                             </h2>
-                          </div>
-                        </div>
-                      </div>
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                      </div>-->
 
-
-                      <!--                      <div class="w-full mb-4 lg:mb-0 md:w-2/5">-->
-                      <!--                        <div class="flex ">-->
-
-                      <!--                          <div>-->
-                      <!--                            <p class="mb-2 text-sm font-medium text-gray-500 dark:text-gray-400">-->
-                      <!--                              Frequency-->
-                      <!--                            </p>-->
-                      <!--                            <h2 class="text-base font-semibold text-gray-700 dark:text-gray-400">-->
-                      <!--                              3.5 GHz-->
-                      <!--                            </h2>-->
-                      <!--                          </div>-->
-                      <!--                        </div>-->
-                      <!--                      </div>-->
                     </div>
                   </div>
-                </div>
+<!--                </div>-->
               </div>
             </div>
             <div class="py-6 mb-6 border-t border-b border-gray-200 dark:border-gray-700">
@@ -211,14 +191,14 @@ Most customers receive within 3-31 days.
               </div>
 
               <button href="#" @click="cartStore.addItem(product)"
-                      class="w-full px-4 py-3 text-center text-cyan-600 bg-cyan-100 border border-cyan-600 dark:hover:bg-gray-900 dark:text-gray-400 dark:border-gray-700 dark:bg-gray-700 hover:bg-cyan-600 hover:text-gray-100 lg:w-1/2 rounded-xl">
+                      class="w-full px-4 py-3 text-center btn  btn-primary border border-cyan-600 dark:hover:bg-gray-900 dark:text-gray-400 dark:border-gray-700 dark:bg-gray-700 hover:bg-cyan-600 hover:text-gray-100 lg:w-1/2 rounded-xl">
                 Ajouter au Panier
               </button>
             </div>
             <div class="flex gap-4 mb-6">
               <router-link to="/cart" class="w-full ">
                 <button href="#" @click="cartStore.addItem(product)"
-                        class="w-full px-4 py-3 text-center text-gray-100 bg-cyan-600 border border-transparent dark:border-gray-700 hover:border-cyan-500 hover:text-cyan-700 hover:bg-cyan-100 dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-900 rounded-xl">
+                        class="w-full px-4 py-3 text-center btn btn-primary border border-transparent dark:border-gray-700 hover:border-cyan-500 hover:text-cyan-700 hover:bg-cyan-100 dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-900 rounded-xl">
                   Acheter
                 </button>
               </router-link>

@@ -1,29 +1,32 @@
+<script setup>
+import '@/components/products/ProductItem.vue'
+</script>
 <script>
 export default {
-  props:{
-    source:String,
-    name: String,
-    price: Number,
-    description: String,
-    category: String
+  props: {
+    service: Object
   }
 }
 </script>
 <template>
-  <div class="card card-side bg-base-100 shadow-xl  h-40 gap-0.5 mb-2">
-    <figure class="w-36 "><img :src="source" alt="Album" class="object-cover h-full w-full" /></figure>
-    <div class="card-body p-0  w-1/2 h-1/3">
-      <h2 class="card-title text-xs">{{name}}</h2>
-      <span class="badge">{{category}}</span>
-      <p class="text-xs">{{description}}</p>
+  <div
+    class="rounded-lg mr-0 bg-base-100 p-2 shadow-md border-2 border-gray-50 mt-4  flex flex-col h-auto items-center justify-between">
+    <figure class="flex items-center  w-32 h-32 justify-center "><img :src="service.image" alt="Shoes"
+                                                                      class="object-cover h-32 w-full" /></figure>
+    <div class="flex flex-col items-center w-full h-full ">
+      <h2 class="card-title text-md font-roboto text-center h-4/5 p-2 ">{{ service.name }}</h2>
+      <div>
+        <p class="text-center text-xs font-roboto h-1/5">{{ service.description }}</p>
+      </div>
+      <span class="badge text-center text-xs font-roboto h-8">{{ service.category }}</span>
 
-      <div class="card-actions justify-end">
-        <p class="text-xs">{{price}}</p>
-        <button class="btn btn-primary min-h-2 h-8" >buy now</button>
+      <p class="text-sm font-roboto text-center font-bold ">{{ service.price }} €</p>
+
+      <div class="card-actions justify-center">
+        <!--        <button class="btn btn-primary text-xs">voir plus</button>-->
       </div>
     </div>
   </div>
-
 </template>
 
 <style scoped>

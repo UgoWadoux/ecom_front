@@ -4,21 +4,27 @@ import FooterComponent from '@/components/navigation/FooterComponent.vue'
 </script>
 
 <template>
-  <header>
-    <NavBar></NavBar>
-  </header>
-<main >
-<RouterView />
-</main>
-    <footer-component></footer-component>
+  <div class="flex h-screen flex-col">
+    <header>
+      <NavBar></NavBar>
+    </header>
+    <main class="flex-1">
+      <RouterView />
+    </main>
+    <footer class="" >
+      <footer-component></footer-component>
+    </footer>
+  </div>
+
 </template>
 
 <style scoped>
-main{
+main {
   //padding: 20px;
   //margin-left: 32px;
   //margin-right: 32px;
 }
+
 header {
   line-height: 1.5;
   max-height: 100vh;

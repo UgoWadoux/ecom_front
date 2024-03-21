@@ -4,7 +4,7 @@ import { useHttpStore } from '@/stores/httpStore.js'
 </script>
 <template>
   <div class="sm:justify-center:flex">
-  <div class="grid grid-cols-2 xl:grid-cols-3  flex-wrap justify-center mt-12 ">
+  <div class="grid grid-cols-2 xl:grid-cols-3  flex-wrap gap-3 m-4 ">
     <ProductItem
       v-for="product in products"
       :product="product"
