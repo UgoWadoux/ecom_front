@@ -1,6 +1,8 @@
 # Green hub (Front)
 
-![image]({https://img.shields.io/badge/Vue%20js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D})
+
+
+![Alt text](./src/assets/images/Greeen-Hub-restyle-1.webp)
 
 ## Description
 
