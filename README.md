@@ -1,8 +1,13 @@
 # Green hub (Front)
 
 
+<img src="https://img.shields.io/badge/Vue%20js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D">
+<img src="https://img.shields.io/badge/daisyUI-1ad1a5?style=for-the-badge&logo=daisyui&logoColor=white">
+<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white">
+<img src="https://img.shields.io/badge/axios-671ddf?&style=for-the-badge&logo=axios&logoColor=white">
+<img src="https://img.shields.io/badge/postcss-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white">
 
-![Alt text](./src/assets/images/Greeen-Hub-restyle-1.webp)
+<img src="./src/assets/images/Greeen-Hub-restyle-1.webp"  style="display:flex; margin: 0 auto; max-width: 300px">
 
 ## Description
 
@@ -35,6 +40,3 @@ Pour lancer le serveur
 npm run dev
 ```
 
-
-Plugins installés :
-- unplugin avec phosphore
