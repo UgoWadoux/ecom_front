@@ -7,7 +7,7 @@
 <img src="https://img.shields.io/badge/axios-671ddf?&style=for-the-badge&logo=axios&logoColor=white">
 <img src="https://img.shields.io/badge/postcss-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white">
 
-<img src="./src/assets/images/Greeen-Hub-restyle-1.webp"  style="display:flex; margin: 0 auto; max-width: 300px">
+<img src="./src/assets/images/Greeen-Hub-restyle-1.webp"  style="display:inline-block; margin: 0 auto; max-width:300px">
 
 ## Description
 
