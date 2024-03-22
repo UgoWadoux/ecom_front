@@ -31,14 +31,21 @@ The frontend part is develop in Vue.js.
 - axios for Http request
 - tailwind for css
 - daisyUI for component css
+- pinia for storing information
 
 ## Installation
 
+### Clone the repository
+```sh
+git clone https://github.com/UgoWadoux/ecom_front.git
+```
+
+### Install dependencies
 ```sh
 npm install
 ```
 
-Pour lancer le serveur 
+### Launch developpement server 
 ```sh
 npm run dev
 ```
