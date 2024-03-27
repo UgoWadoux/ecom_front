@@ -7,34 +7,59 @@ axios.defaults.baseURL = import.meta.env.VITE_API_URL
 // axios.defaults.withXSRFToken = true
 export const useHttpStore = defineStore({
   id: 'http',
-  state:()=>({
-    products:null,
-    product:null
+  state: () => ({
+    products: null,
+    product: null,
+    user: null
   }),
-  actions:{
-    async getProducts(){
-      try{
-        let response = await axios.get('/products')
+  actions: {
+
+    async getProducts() {
+      try {
+        let response
+
+        response = await axios.get('/products')
         this.products = response.data.products
+
         return this.products
-      }catch (error){
+      } catch (error) {
         console.log(error)
       }
     },
-    async getProduct(id){
+
+    async getProduct(id) {
       try {
-        let response = await axios.get('/products/'+id)
+        let response
+
+        response = await axios.get('/products/' + id)
         this.product = response.data.product
+
         return this.product
-      }catch (error){
+      } catch (error) {
         console.log(error)
       }
     },
-    async register(userData){
+
+    async register(userData) {
       try {
-        let response = await axios.post('/register', userData)
+        let response
+
+        response = await axios.post('/register', userData)
+
         return response
-      }catch (error){
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    async login(loginData) {
+      try {
+        let response
+
+        response = await axios.post('login', loginData)
+        this.user = response.data
+
+        return this.user
+      } catch (error) {
         console.log(error)
       }
     }
