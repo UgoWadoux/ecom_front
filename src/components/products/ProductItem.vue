@@ -24,9 +24,9 @@ export default {
 
     <div class="flex flex-col items-center w-full h-full justify-between ">
 
-      <h2 class="card-title text-sm font-roboto text-center h-4/5 p-2 ">{{ product.title }}</h2>
+      <h2 class="card-title text-sm font-roboto text-center h-4/5 p-2 ">{{ product.name }}</h2>
 
-      <span class="badge border-none text-center bg-secondary text-white text-xs font-roboto h-8">{{ product.category }}</span>
+      <span class="badge border-none text-center bg-secondary text-white text-xs font-roboto h-8">{{ product.category.name }}</span>
 
       <div class="flex flex-col justify-end h-8 w-full">
         <p class="text-sm font-roboto text-center font-bold ">{{ product.price }} €</p>

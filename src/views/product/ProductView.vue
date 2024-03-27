@@ -70,11 +70,10 @@ const cartStore = useCartStore()
           <div class="lg:pl-20">
             <div class="mb-6 ">
               <span
-                class="px-2.5 py-0.5 text-xs text-white bg-secondary dark:bg-gray-700 rounded-xl dark:text-gray-200">{{ product?.category
-                }}</span>
+                class="px-2.5 py-0.5 text-xs text-white bg-secondary dark:bg-gray-700 rounded-xl dark:text-gray-200">{{ product?.category.name}}</span>
               <h2
                 class="max-w-xl mt-6 mb-6 text-xl font-semibold leading-loose tracking-wide text-gray-700 md:text-2xl dark:text-gray-300">
-                {{ product?.title }}
+                {{ product?.name }}
               </h2>
               <div class="flex flex-wrap items-center mb-6">
                 <ul class="flex mb-4 mr-2 lg:mb-0">
