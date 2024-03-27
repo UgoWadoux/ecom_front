@@ -1,4 +1,3 @@
-;k
 <template>
   <div class="flex flex-col items-center ">
 
@@ -25,7 +24,9 @@
     <p>
       Pas encore de compte ?
     </p>
-    <button class="btn btn-active"> Créer un compte</button>
+   <router-link to="/register"><button class="btn btn-active"> Créer un compte</button></router-link>
 
   </div>
 </template>
+<script setup>
+</script>

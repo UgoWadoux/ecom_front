@@ -29,6 +29,14 @@ export const useHttpStore = defineStore({
       }catch (error){
         console.log(error)
       }
+    },
+    async register(userData){
+      try {
+        let response = await axios.post('/register', userData)
+        return response
+      }catch (error){
+        console.log(error)
+      }
     }
   }
 })
