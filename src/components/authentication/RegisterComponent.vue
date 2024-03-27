@@ -20,6 +20,13 @@
           placeholder="Email" />
 
         <input
+          v-model="address"
+          type="text"
+          class="block border border-grey-light w-full p-3 rounded mb-4"
+          name="address"
+          placeholder="Address" />
+
+        <input
           v-model="password"
           type="password"
           class="block border border-grey-light w-full p-3 rounded mb-4"
@@ -70,6 +77,7 @@ export default {
     return {
       name: '',
       email: '',
+      address: '',
       password: '',
       passwordConfirmation: '',
       isSubmit: false
@@ -83,6 +91,7 @@ export default {
       userData = {
         name: this.name,
         email: this.email,
+        address: this.address,
         password: this.password ,
         password_confirmation: this.passwordConfirmation
       }
