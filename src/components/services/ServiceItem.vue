@@ -1,13 +1,7 @@
-<script setup>
-import '@/components/products/ProductItem.vue'
-</script>
-<script>
-export default {
-  props: {
-    service: Object
-  }
-}
-</script>
+<!--<script setup>-->
+<!--import '@/components/products/ProductItem.vue'-->
+<!--</script>-->
+
 <template>
   <div
     class="rounded-lg mr-0 bg-base-100 p-2 shadow-md border-2 border-gray-50 mt-4  flex flex-col h-auto items-center justify-between">
@@ -28,7 +22,13 @@ export default {
     </div>
   </div>
 </template>
-
+<script>
+export default {
+  props: {
+    service: Object
+  }
+}
+</script>
 <style scoped>
 
 </style>

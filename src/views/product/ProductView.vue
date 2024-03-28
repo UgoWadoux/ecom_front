@@ -1,8 +1,3 @@
-<script setup>
-import { useCartStore } from '@/stores/cartStore.js'
-
-const cartStore = useCartStore()
-</script>
 
 <template>
   <section class="py-10 font-poppins dark:bg-gray-800">

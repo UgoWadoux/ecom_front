@@ -1,10 +1,3 @@
-<script>
-export default {
-  props: {
-    product: Object
-  }
-}
-</script>
 <template>
   <div
     class="rounded-lg mr-0 bg-base-100 p-2 shadow-md border-2 border-gray-50 mt-4 w-full  h-full max-w-96 flex flex-col  items-center justify-between">
@@ -21,6 +14,13 @@ export default {
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    product: Object
+  }
+}
+</script>
 <style>
 
 </style>

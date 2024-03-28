@@ -1,16 +1,4 @@
-<script setup>
-import { useCartStore } from '@/stores/cartStore.js'
 
-const cartStore = useCartStore()
-</script>
-<script>
-export default {
-  props: {
-    product: Object,
-    quantity: Number
-  }
-}
-</script>
 
 <template>
   <div
@@ -33,6 +21,21 @@ export default {
   </div>
 </template>
 
+<script>
+import { useCartStore } from '@/stores/cartStore.js'
+
+
+export default {
+  setup(){
+    const cartStore = useCartStore()
+    return { cartStore }
+  },
+  props: {
+    product: Object,
+    quantity: Number
+  }
+}
+</script>
 <style scoped>
 
 </style>

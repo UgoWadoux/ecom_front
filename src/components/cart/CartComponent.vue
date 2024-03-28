@@ -1,11 +1,3 @@
-// CartComponent.vue
-<script setup>
-import { useCartStore } from '@/stores/cartStore.js'
-import CartItem from '@/components/cart/CartItem.vue'
-
-const cartStore = useCartStore()
-</script>
-
 <template>
   <div class="grid grid-cols-1 place-items-center flex-wrap gap-3 m-4 ">
 
@@ -24,3 +16,16 @@ const cartStore = useCartStore()
     <button class="btn btn-primary max-w-96 w-full ">Commander</button>
   </div>
 </template>
+<script>
+import { useCartStore } from '@/stores/cartStore.js'
+import CartItem from '@/components/cart/CartItem.vue'
+import { defineComponent } from 'vue'
+export default defineComponent({
+  setup(){
+    const cartStore = useCartStore()
+    return { cartStore }
+  },
+  components: { CartItem }
+})
+
+</script>

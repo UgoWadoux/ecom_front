@@ -1,4 +1,3 @@
-<!-- component -->
 <template>
   <!-- component -->
   <div class="bg-grey-lighter min-h-screen flex flex-col">

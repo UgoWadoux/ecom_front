@@ -1,9 +1,3 @@
-<script setup>
-
-import ProductItemHome from '@/components/products/ProductItemHome.vue'
-import ServiceItemHome from '@/components/services/ServiceItemHome.vue'
-</script>
-
 <template>
   <div class="mb-8">
     <main class="flex justify-center mb-auto ">
@@ -40,8 +34,15 @@ import ServiceItemHome from '@/components/services/ServiceItemHome.vue'
 
 </template>
 <script>
-export default {
+import ProductItemHome from '@/components/products/ProductItemHome.vue'
+import ServiceItemHome from '@/components/services/ServiceItemHome.vue'
+import { defineComponent } from 'vue'
+export default defineComponent({
   name: 'HomeView',
+  components: {
+    ProductItemHome,
+    ServiceItemHome
+  },
   data() {
     return {
       products: [
@@ -74,5 +75,5 @@ export default {
       ]
     }
   }
-}
+})
 </script>

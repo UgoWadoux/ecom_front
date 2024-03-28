@@ -1,13 +1,4 @@
-<script setup>
-import { useHttpStore } from '@/stores/httpStore.js'
-
-const httpStore = useHttpStore()
-
-</script>
 <template>
-  <!-- component -->
-
-
   <section class=" py-1 ">
     <div class="w-full lg:w-8/12 px-4 mx-auto mt-6">
       <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
@@ -118,5 +109,12 @@ const httpStore = useHttpStore()
   </section>
 </template>
 <script>
+import { useHttpStore } from '@/stores/httpStore.js'
 
+export default {
+  setup(){
+    const httpStore = useHttpStore()
+    return { httpStore }
+  }
+}
 </script>
