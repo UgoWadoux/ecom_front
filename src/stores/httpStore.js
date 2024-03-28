@@ -21,11 +21,8 @@ export const useHttpStore = defineStore({
 
     async getProducts() {
       try {
-        let response
-
-        response = await axios.get('/products')
+        let response = await axios.get('/products')
         this.products = response.data.products
-
         return this.products
       } catch (error) {
         console.log(error)
@@ -34,11 +31,8 @@ export const useHttpStore = defineStore({
 
     async getProduct(id) {
       try {
-
-
          let response = await axios.get('/products/' + id)
         this.product = response.data.product
-
         return this.product
       } catch (error) {
         console.log(error)
@@ -47,7 +41,6 @@ export const useHttpStore = defineStore({
 
     async register(userData) {
       try {
-
         return await axios.post('/register', userData)
       } catch (error) {
         console.log(error)
@@ -57,9 +50,7 @@ export const useHttpStore = defineStore({
       try {
         let response = await axios.post('login', loginData)
         this.user = response.data.data.user
-
         let token = response.data.data.token
-        // console.log(token)
         axios.defaults.headers.common = {
           'Authorization': `Bearer ${token}`
         }
@@ -67,7 +58,12 @@ export const useHttpStore = defineStore({
       } catch (error) {
         console.log(error)
       }
+    },
+    logout(){
+      this.user = null
+      delete axios.defaults.headers.common
     }
+
   }
 })
 

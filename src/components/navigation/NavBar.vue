@@ -18,12 +18,15 @@
             </router-link>
           </li>
           <li><a>Blog</a></li>
-          <li>
+          <li v-if="httpStore.currentUser==null">
             <router-link to="/login">
               Connexion
             </router-link>
           </li>
-          <li>
+          <li v-if="httpStore.currentUser!=null">
+            <a @click="httpStore.logout()">Déconnexion</a>
+          </li>
+          <li v-if="httpStore.currentUser!=null">
             <router-link to="/profil">
               Profil
             </router-link>
@@ -52,6 +55,14 @@
   </div>
 </template>
 <script>
+import { useHttpStore } from '@/stores/httpStore.js'
+export default {
+  setup(){
+    const httpStore = useHttpStore()
+
+    return { httpStore }
+  }
+}
 </script>
 
 <style scoped>
