@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
-import axios from 'axios'
+import axios from './axiosInstance.js'
 
 // axios.defaults.baseURL = import.meta.env.VITE_FAKESTORE_URL
-axios.defaults.baseURL = import.meta.env.VITE_API_URL
+// axios.defaults.baseURL = import.meta.env.VITE_API_URL
 // axios.defaults.withCredentials = true
 // axios.defaults.withXSRFToken = true
 export const useHttpStore = defineStore({
@@ -56,7 +56,7 @@ export const useHttpStore = defineStore({
         let response
 
         response = await axios.post('login', loginData)
-        this.user = response.data
+        this.user = response.data.data.user
 
         return this.user
       } catch (error) {
