@@ -8,16 +8,26 @@
         </div>
         <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 w-52">
           <li>
-            <router-link to="/products">Produits</router-link>
+            <router-link to="/products">
+              Produits
+            </router-link>
           </li>
           <li>
-            <router-link to="/services">Services</router-link>
+            <router-link to="/services">
+              Services
+            </router-link>
           </li>
           <li><a>Blog</a></li>
           <li>
-            <router-link to="/login">Connexion</router-link>
+            <router-link to="/login">
+              Connexion
+            </router-link>
           </li>
-
+          <li>
+            <router-link to="/profil">
+              Profil
+            </router-link>
+          </li>
         </ul>
       </div>
       <router-link to="/"><img src="../../assets/images/logo/logo_greenhub.webp" class="w-8"></router-link>

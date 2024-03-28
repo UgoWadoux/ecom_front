@@ -1,8 +1,5 @@
 <script setup>
-import lavageAuto from '../../../public/service/lavage_voiture.webp'
-import locationVelo from '../../../public/service/location_velo.webp'
 import ServiceItem from '@/components/services/ServiceItem.vue'
-import ProductItem from '@/components/products/ProductItem.vue'
 </script>
 <template>
   <div class="grid grid-cols-2 xl:grid-cols-3  flex-wrap gap-3 m-4 ">
