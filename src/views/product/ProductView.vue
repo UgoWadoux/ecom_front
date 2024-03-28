@@ -1,4 +1,3 @@
-
 <template>
   <section class="py-10 font-poppins dark:bg-gray-800">
     <div class="max-w-6xl px-4 mx-auto">
@@ -206,9 +205,13 @@ Most customers receive within 3-31 days.
 
 <script>
 import { useHttpStore } from '@/stores/httpStore.js'
-
+import { useCartStore } from '@/stores/cartStore.js'
 export default {
+  setup(){
+    const cartStore = useCartStore()
 
+    return  { cartStore }
+  },
   data() {
     return {
       product: null
