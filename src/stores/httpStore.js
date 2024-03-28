@@ -12,6 +12,11 @@ export const useHttpStore = defineStore({
     product: null,
     user: null
   }),
+  getters: {
+    currentUser(){
+      return this.user
+    },
+  },
   actions: {
 
     async getProducts() {

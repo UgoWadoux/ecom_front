@@ -1,3 +1,9 @@
+<script setup>
+import { useHttpStore } from '@/stores/httpStore.js'
+
+const httpStore = useHttpStore()
+
+</script>
 <template>
   <!-- component -->
 
@@ -31,7 +37,7 @@
                   </label>
                   <input type="email"
                          class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                         value="jesse@example.com">
+                         :value="httpStore.currentUser.email">
                 </div>
               </div>
               <div class="w-full lg:w-6/12 px-4">
@@ -41,7 +47,7 @@
                   </label>
                   <input type="text"
                          class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                         value="Lucky">
+                         :value="httpStore.currentUser.name">
                 </div>
               </div>
               <div class="w-full lg:w-6/12 px-4">
@@ -69,7 +75,7 @@
                   </label>
                   <input type="text"
                          class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                         value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
+                         :value="httpStore.currentUser.adress">
                 </div>
               </div>
               <div class="w-full lg:w-4/12 px-4">
