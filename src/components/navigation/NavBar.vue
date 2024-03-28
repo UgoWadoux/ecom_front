@@ -6,7 +6,7 @@
 
           <i-ph-list-bold></i-ph-list-bold>
         </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 w-52">
+        <ul tabindex="0" class=" menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 w-52">
           <li>
             <router-link to="/products">
               Produits
@@ -37,9 +37,13 @@
     </div>
 
     <div class="navbar-end">
+      <div v-if="httpStore.currentUser!=null">
+        <p>Salut {{httpStore.currentUser.name}} !</p>
+      </div>
       <router-link to="/login">
         <button class="btn btn-ghost btn-circle">
           <i-ph-user-bold></i-ph-user-bold>
+
         </button>
       </router-link>
 
@@ -61,7 +65,8 @@ export default {
     const httpStore = useHttpStore()
 
     return { httpStore }
-  }
+  },
+
 }
 </script>
 
