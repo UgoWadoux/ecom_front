@@ -9,7 +9,10 @@ export const useCartStore = defineStore({
     totalCost: JSON.parse(localStorage.getItem('cartTotalCost')) || 0,
   }),
   getters: {
-    formatedTotalCost: (state) => Math.round((state.totalCost + Number.EPSILON) * 100) / 100
+    formatedTotalCost: (state) => Math.round((state.totalCost + Number.EPSILON) * 100) / 100,
+    currentCart(){
+      return this.items
+    }
   },
   actions: {
     persistToLocalStorage() {

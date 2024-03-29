@@ -62,8 +62,11 @@ export const useHttpStore = defineStore({
     logout(){
       this.user = null
       delete axios.defaults.headers.common
+    },
+    async postOrder(orderData){
+      let response = await axios.post('/orders', orderData)
+      return response.data
     }
-
   }
 })
 

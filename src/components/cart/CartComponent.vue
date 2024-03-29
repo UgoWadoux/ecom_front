@@ -13,19 +13,37 @@
       <p class="font-roboto">Nombre de produits : {{ cartStore.totalItems }}</p>
       <p class="font-roboto">Total : {{ cartStore.totalCost.toFixed(2) }} €</p>
     </div>
-    <button class="btn btn-primary max-w-96 w-full ">Commander</button>
+    <button class="btn btn-primary max-w-96 w-full " @click="sendOder">Commander</button>
   </div>
 </template>
 <script>
 import { useCartStore } from '@/stores/cartStore.js'
 import CartItem from '@/components/cart/CartItem.vue'
 import { defineComponent } from 'vue'
+import { useHttpStore } from '@/stores/httpStore.js'
+
 export default defineComponent({
+  components: { CartItem },
   setup(){
     const cartStore = useCartStore()
     return { cartStore }
   },
-  components: { CartItem }
+  methods :{
+    sendOder(){
+      let products = useCartStore().currentCart
+      console.log(products[1])
+      let productsObjects = []
+      products.forEach(product=>{
+        productsObjects.push({
+          'quantity': product.count,
+          'id': product.item.id
+        })
+      })
+      console.log(productsObjects)
+
+    }
+  }
+
 })
 
 </script>
