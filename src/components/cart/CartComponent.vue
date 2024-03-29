@@ -13,7 +13,7 @@
       <p class="font-roboto">Nombre de produits : {{ cartStore.totalItems }}</p>
       <p class="font-roboto">Total : {{ cartStore.totalCost.toFixed(2) }} €</p>
     </div>
-    <button class="btn btn-primary max-w-96 w-full " @click="sendOder">Commander</button>
+    <button class="btn btn-primary max-w-96 w-full " @click="dataProduct">Commander</button>
   </div>
 </template>
 <script>
@@ -29,19 +29,29 @@ export default defineComponent({
     return { cartStore }
   },
   methods :{
-    sendOder(){
+    dataProduct(){
       let products = useCartStore().currentCart
-      console.log(products[1])
       let productsObjects = []
+
       products.forEach(product=>{
         productsObjects.push({
           'quantity': product.count,
           'id': product.item.id
         })
       })
-      console.log(productsObjects)
-
-    }
+      // console.log(productsObjects)
+      return productsObjects
+    },
+    dataOrder(){
+      let user = useHttpStore().currentUser
+      let products = this.dataProduct()
+      let deliver = 0
+      return {
+        'deliver': deliver,
+        'user_id': user.id,
+        'products': products
+      }
+    },
   }
 
 })
