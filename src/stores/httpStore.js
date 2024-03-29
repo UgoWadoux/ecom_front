@@ -51,6 +51,7 @@ export const useHttpStore = defineStore({
         let response = await axios.post('login', loginData)
         this.user = response.data.data.user
         let token = response.data.data.token
+        // setting the token for future request
         axios.defaults.headers.common = {
           'Authorization': `Bearer ${token}`
         }
@@ -61,6 +62,7 @@ export const useHttpStore = defineStore({
     },
     logout(){
       this.user = null
+      // deleting the token
       delete axios.defaults.headers.common
     },
     async postOrder(orderData){
