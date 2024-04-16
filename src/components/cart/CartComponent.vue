@@ -13,7 +13,10 @@
       <p class="font-roboto">Nombre de produits : {{ cartStore.totalItems }}</p>
       <p class="font-roboto">Total : {{ cartStore.totalCost.toFixed(2) }} €</p>
     </div>
-    <button class="btn btn-primary max-w-96 w-full " @click="sendOrder">Commander</button>
+<!--    <router-link to="/success_order">-->
+      <button class="btn btn-primary max-w-96 w-full " @click="sendOrder">Commander</button>
+<!--    </router-link>-->
+
   </div>
 </template>
 <script>
@@ -25,8 +28,9 @@ import { useHttpStore } from '@/stores/httpStore.js'
 export default defineComponent({
   components: { CartItem },
   setup(){
+    const httpStore = useHttpStore()
     const cartStore = useCartStore()
-    return { cartStore }
+    return { cartStore, useHttpStore }
   },
   methods :{
     dataProduct(){
@@ -54,11 +58,16 @@ export default defineComponent({
       }
     },
     sendOrder(){
-      const httpStore = useHttpStore()
-      let dataOrder = this.dataOrder()
-      // console.log(dataOrder)
-      let order = httpStore.postOrder(dataOrder)
-      console.log(order)
+      if (useHttpStore().authenticated === true){
+        const httpStore = useHttpStore()
+        let dataOrder = this.dataOrder()
+        // console.log(dataOrder)
+        let order = httpStore.postOrder(dataOrder)
+        console.log(order)
+        this.$router.replace ({name: 'successOrder'})
+      }
+      this.$router.replace ({name: 'successOrder'})
+
     }
   }
 

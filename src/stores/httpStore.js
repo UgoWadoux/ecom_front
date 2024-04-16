@@ -10,7 +10,8 @@ export const useHttpStore = defineStore({
   state: () => ({
     products: null,
     product: null,
-    user: null
+    user: null,
+    authenticated: false
   }),
   getters: {
     currentUser(){
@@ -55,6 +56,7 @@ export const useHttpStore = defineStore({
         axios.defaults.headers.common = {
           'Authorization': `Bearer ${token}`
         }
+        this.authenticated = true
         return this.user
       } catch (error) {
         console.log(error)
@@ -63,6 +65,7 @@ export const useHttpStore = defineStore({
     logout(){
       this.user = null
       // deleting the token
+      this.authenticated = false
       delete axios.defaults.headers.common
     },
     async postOrder(orderData){

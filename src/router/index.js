@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/home/HomeView.vue'
+import { useHttpStore } from '@/stores/httpStore.js'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,6 +44,19 @@ const router = createRouter({
       path: '/product/:id',
       name: 'product',
       component:()=>import('../views/product/ProductView.vue')
+    },
+    {
+      path: '/success_order',
+      name: 'successOrder',
+      component:()=>import('../views/cart/SuccessOrder.vue'),
+      beforeEnter: (to, from, next)=>{
+        console.log(useHttpStore().$state.authenticated)
+        if (useHttpStore().$state.authenticated === false) {
+          next("login")
+        }else {
+          next()
+        }
+      }
     },
     {
       path: '/about',
