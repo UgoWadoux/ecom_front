@@ -1,6 +1,7 @@
 <template>
   <div
-    class="rounded-lg mr-0 bg-white p-2 shadow-md border-2 border-gray-50 mt-4  flex flex-col h-auto items-center justify-between">
+    class="rounded-lg mr-0 bg-white p-2 shadow-md border-2 border-gray-50 mt-4  flex flex-col h-auto
+     items-center justify-between">
 
     <figure class="flex items-center  w-32 h-32 justify-center ">
 
@@ -14,7 +15,8 @@
 
       <h2 class="card-title text-sm font-roboto text-center h-4/5 p-2 ">{{ product.name }}</h2>
 
-      <span class="badge border-none text-center bg-secondary text-white text-xs font-roboto h-8">{{ product.category.name }}</span>
+      <span class="badge border-none text-center bg-secondary text-white text-xs font-roboto h-8">
+        {{ product.category.name }}</span>
 
       <div class="flex flex-col justify-end h-8 w-full">
         <p class="text-sm font-roboto text-center font-bold ">{{ product.price }} €</p>
