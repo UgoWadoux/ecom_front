@@ -1,8 +1,7 @@
 <template>
   <div class="mb-8">
     <main class="flex justify-center mb-auto ">
-      <!--    <img src="../../assets/images/accueil_mobile.png" class=" visible sm:invisible">-->
-      <img src="../../assets/images/Greeen-Hub-restyle-1.webp" alt="" class="max-h-96">
+      <img src="../../assets/images/Greeen-Hub-restyle-1.webp" loading="lazy" alt="logo accueil" class="max-h-96">
     </main>
     <div class="flex justify-center font-r">
       <h2 class="font-roboto text-xl mt-8 font-bold ">Nos derniers produits !</h2>

@@ -2,7 +2,7 @@
   <div class="navbar flex justify-between mt-auto border-b">
     <div class="navbar-start w-auto">
       <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle" aria-label="menu">
 
           <i-ph-list-bold></i-ph-list-bold>
         </div>
@@ -17,7 +17,7 @@
               Services
             </router-link>
           </li>
-          <li><a>Blog</a></li>
+          <li><a href="/">Blog</a></li>
           <li v-if="httpStore.currentUser==null">
             <router-link to="/login">
               Connexion
@@ -33,7 +33,7 @@
           </li>
         </ul>
       </div>
-      <router-link to="/"><img src="../../assets/images/logo/logo_greenhub.webp" class="w-8"></router-link>
+      <router-link to="/"><img src="../../assets/images/logo/logo_greenhub.webp" alt="logo" class="w-8"></router-link>
     </div>
 
     <div class="navbar-end">
@@ -41,14 +41,14 @@
         <p>Salut {{httpStore.currentUser.name}} !</p>
       </div>
       <router-link to="/login">
-        <button class="btn btn-ghost btn-circle">
+        <button class="btn btn-ghost btn-circle" aria-label="connexion">
           <i-ph-user-bold></i-ph-user-bold>
 
         </button>
       </router-link>
 
       <router-link to="/cart">
-        <button class="btn btn-ghost hover:btn-circle">
+        <button class="btn btn-ghost hover:btn-circle" aria-label="cart">
           <div class="indicator">
             <i-ph-shopping-cart-bold></i-ph-shopping-cart-bold>
             <span class="badge badge-xs badge-primary indicator-item"></span>
